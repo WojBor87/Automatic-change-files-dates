@@ -1,4 +1,4 @@
-# Automatic-change-files-dates
+# Change Date and Time Powershell Script
 
 ## SYNOPSIS
     Skrypt PowerShell do zmiany wszystkich dat pliku na bieżącą datę i godzinę.
