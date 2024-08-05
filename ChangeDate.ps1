@@ -35,7 +35,7 @@ try {
 				# Obsługa błędów
 				"Failed to update dates for file: $($_.FullName) - Error: $_"
 			}
-        }
+        	}
 	}
     
     Copy-Item -Path "directoryPath.txt" -Destination "directoryPathOld.txt"
@@ -51,9 +51,7 @@ try {
 		Attachments = $logFileName
 		SmtpServer = 'serwer SMTP'
 	}
-
-	#Send-MailMessage @sendMailMessageSplat
-	
+ 
 } catch {
 
     "An error occurred: $_"
@@ -69,9 +67,7 @@ try {
 		Priority = 'High'
 		SmtpServer = 'serwer SMTP'
 	}
-	
-	#Send-MailMessage @sendMailMessageSplat
 
 } finally {
-    exit
+    Send-MailMessage @sendMailMessageSplat
 }
